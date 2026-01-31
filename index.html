@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshEats | Premium Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <i class="fas fa-utensils"></i> Fresh<span>Eats</span>
+            </a>
+            <div class="nav-actions">
+                <div class="cart-icon" id="cartTrigger">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Alex+Doe&background=ff4d00&color=fff" style="width:40px; border-radius:12px;" alt="User">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero container">
+        <div class="hero-text">
+            <h1>The Fastest Delivery in <span>Your City</span></h1>
+            <p>Hungry? Order your favorite meal from the best local restaurants and get it delivered in under 30 minutes.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for burgers, sushi, pizza...">
+                <button>Search</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800" alt="Delicious Food" style="width:100%; border-radius:32px; box-shadow: var(--shadow);">
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="categories">
+            <div class="category-pill active">🔥 Trending</div>
+            <div class="category-pill">🍔 Burger</div>
+            <div class="category-pill">🍕 Pizza</div>
+            <div class="category-pill">🍣 Sushi</div>
+            <div class="category-pill">🥗 Healthy</div>
+            <div class="category-pill">🍦 Dessert</div>
+            <div class="category-pill">🍹 Drinks</div>
+        </div>
+
+        <div class="section-header">
+            <h2 style="font-size:2rem; font-weight:800;">Popular Near You</h2>
+            <a href="#" style="color:var(--primary); font-weight:700; text-decoration:none;">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="food-grid">
+            <!-- Food Item 1 -->
+            <div class="food-card">
+                <span class="food-badge">⭐ 4.8</span>
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600" alt="Cheeseburger" class="food-img">
+                <div class="food-info">
+                    <h3 style="margin-bottom:0.5rem">Double Cheeseburger</h3>
+                    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1rem;">Angus beef, cheddar, caramelized onions</p>
+                    <div class="food-price">$12.99</div>
+                    <div class="add-btn"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+
+            <!-- Food Item 2 -->
+            <div class="food-card">
+                <span class="food-badge">⭐ 4.9</span>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3 style="margin-bottom:0.5rem">Margherita Supreme</h3>
+                    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1rem;">Fresh basil, mozzarella di bufala, olive oil</p>
+                    <div class="food-price">$16.50</div>
+                    <div class="add-btn"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+
+            <!-- Food Item 3 -->
+            <div class="food-card">
+                <span class="food-badge">⭐ 4.7</span>
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=600" alt="Sushi" class="food-img">
+                <div class="food-info">
+                    <h3 style="margin-bottom:0.5rem">Salmon Nigiri Set</h3>
+                    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1rem;">Fresh Atlantic salmon, premium vinegared rice</p>
+                    <div class="food-price">$24.00</div>
+                    <div class="add-btn"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+
+            <!-- Food Item 4 -->
+            <div class="food-card">
+                <span class="food-badge">⭐ 4.5</span>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=600" alt="Bowl" class="food-img">
+                <div class="food-info">
+                    <h3 style="margin-bottom:0.5rem">Quinoa Rainbow Bowl</h3>
+                    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1rem;">Organic greens, chickpeas, tahini dressing</p>
+                    <div class="food-price">$14.25</div>
+                    <div class="add-btn"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="cart-drawer" id="cartDrawer">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+            <h2>My Order</h2>
+            <i class="fas fa-times" id="closeCart" style="cursor:pointer; font-size:1.5rem;"></i>
+        </div>
+        <div class="cart-items" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <!-- Simple Cart Entry -->
+            <div style="display:flex; gap:1rem; align-items:center;">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=100" style="width:60px; height:60px; border-radius:12px; object-fit:cover;" alt="item">
+                <div style="flex:1;">
+                    <p style="font-weight:700;">Double Cheeseburger</p>
+                    <p style="color:var(--primary); font-weight:700;">$12.99</p>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem; background:var(--bg); padding:0.4rem; border-radius:8px;">
+                    <i class="fas fa-minus" style="font-size:0.7rem;"></i>
+                    <span style="font-weight:800;">1</span>
+                    <i class="fas fa-plus" style="font-size:0.7rem;"></i>
+                </div>
+            </div>
+        </div>
+        <div style="position:absolute; bottom:2rem; left:2rem; right:2rem;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:1rem; font-weight:700; font-size:1.2rem;">
+                <span>Total</span>
+                <span>$43.74</span>
+            </div>
+            <button style="width:100%; padding:1.2rem; background:var(--primary); color:white; border:none; border-radius:16px; font-weight:800; font-size:1.1rem; cursor:pointer;">Checkout Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
